@@ -57,8 +57,8 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" aria-current="page" href="#">Home</a>
-              <a class="nav-link active" href="#">About</a>
-              <a class="nav-link" href="#">Cocktails!</a>
+              <a class="nav-link" href="#">About</a>
+              <a class="nav-link active" href="#">Cocktails</a>
               <a class="nav-link" href="#">Facebook</a>
               <a class="nav-link" href="#">Instagram</a>
             </div>
@@ -72,8 +72,8 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">What do we offer?</h1>
-        <p class="lead text-muted">At <b>Jurgmeister Cocktails</b> we offer a lot of different services. Have a look below to get more information! <br>Need more info? Mail us your question via the button below.</br> </p>
+        <h1 class="fw-light">Choose your cocktails</h1>
+        <p class="lead text-muted">Each cocktail has information on dominant taste, ingredients & garnish. <br>Want to add the cocktail to your cart for ordering? Just click on the add to cart</br> </p>
         <p>
           <a href="mailto:pieter@test2impress.be" class="btn btn-primary my-2">E-mail us!</a>
         </p>
@@ -84,12 +84,13 @@
   <div class="album py-5 bg-light">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for service in services.all %}
+            {% for cocktail in cocktails.all %}
         <div class="col">
           <div class="card shadow-sm">
-            <img class="card-img-top" width="100%" height="225" src="{{ service.image.url }}"><title>Placeholder</title></img>
+            <img class="card-img-top" width="100%" height="225" src="{{ cocktail.image.url }}"><title>Placeholder</title></img>
+            <h2 class="card-title"> {{cocktail.title}}</h2>
             <div class="card-body">
-              <p class="card-text">{{ service.summary }}</p>
+              <p class="card-text">{{ cocktail.body }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
