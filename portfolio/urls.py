@@ -21,6 +21,6 @@ import about.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',about.views.home, name='home'),
+    path('about/',about.views.about, name='about'),
     path('cocktails/',include('cocktails.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

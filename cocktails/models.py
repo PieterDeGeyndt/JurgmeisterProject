@@ -5,4 +5,4 @@ class Cocktails(models.Model):
     title = models.CharField(max_length=255)
     pubdate = models.DateTimeField()
     body = models.TextField()
-    image = models.ImageField(upload_to='cocktails/')
+    image = models.ImageField(upload_to='cocktails/') 

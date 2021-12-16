@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import About
 
-def home(request):
+def about(request):
     services = About.objects
-    return render(request,'about/home.html',{'services': services})
+    return render(request,'about/about.html',{'services': services})
 
