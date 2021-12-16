@@ -73,32 +73,30 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Choose your cocktails</h1>
-        <p class="lead text-muted">Each cocktail has information on dominant taste, ingredients & garnish. <br>Want to add the cocktail to your cart for ordering? Just click on the add to cart</br> </p>
+        <p class="lead text-muted">Click on the cocktail for more details. <br>Want to add the cocktail directly to your cart? Just click on the "Add to cart" button.</br> </p>
         <p>
-          <a href="mailto:pieter@test2impress.be" class="btn btn-primary my-2">E-mail us!</a>
+          <a href="#kassa" class="btn btn-primary my-2">Your Cart</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-dark">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for cocktail in cocktails.all %}
         <div class="col">
-          <div class="card shadow-sm">
-            <a hef="#"> 
+          <div onclick="location.href='#';" style="cursor: pointer;" class="card shadow-sm h-100">
             <img class="img-fluid" src="{{ cocktail.image.url }}"><title>Placeholder</title></img>
             <h2 class="card-title"> {{cocktail.title}}</h2>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <p class="card-text">{{ cocktail.body }}</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex flex-column justify-content-between mt-auto">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
                 </div>
               </div>
             </div>
-            </a>
           </div>
         </div>
             {% endfor %}
