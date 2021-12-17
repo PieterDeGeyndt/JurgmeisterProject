@@ -18,9 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import about.views
+import homepage.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', homepage.views.home, name='home'),
     path('about/',about.views.about, name='about'),
     path('cocktails/',include('cocktails.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
