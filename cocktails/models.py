@@ -6,6 +6,8 @@ class Cocktails(models.Model):
     pubdate = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to='cocktails/')
+    garnish = models.TextField(default="garnishes")
+    taste = models.TextField(default="sweetsour")
 
     def __str__(self):
         return self.title

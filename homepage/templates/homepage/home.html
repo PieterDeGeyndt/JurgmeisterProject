@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en" class="h-100">
     <head>
-        {% load staticfiles %}
+        {% load static %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
@@ -28,6 +28,18 @@
 
 
         <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:link, a:visited {
+            color: rgb(255, 255, 255);
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -41,44 +53,129 @@
             font-size: 3.5rem;
             }
         }
+        .crossfade > figure {
+            animation: imageAnimation 30s linear infinite 0s;
+            backface-visibility: hidden;
+            background-size:contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: transparent;
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .crossfade > figure:nth-child(1) { 
+            animation-delay: 0s;
+            background-image: url('/static/Background5.PNG'); 
+        }
+
+        .crossfade > figure:nth-child(2) {
+        animation-delay: 6s;
+        background-image: url('/static/background.jpg');
+        }
+
+        .crossfade > figure:nth-child(3) {
+        animation-delay: 12s;
+        background-image: url('/static/Background5.PNG');
+        }
+
+        .crossfade > figure:nth-child(4) {
+        animation-delay: 18s;
+        background-image: url('/static/background2.jpg');
+        }
+
+        .crossfade > figure:nth-child(5) {
+        animation-delay: 24s;
+        background-image: url('/static/Background5.PNG');
+        }
+
+        .backgroundcentertext {
+        background-color: rgba(0,0,0,0.5);
+        align-self: center;
+        }
+
+        .centertext {
+            text-align: center;
+        }
+
+        @keyframes 
+        imageAnimation {  0% 
+            {
+            animation-timing-function: ease-in;
+            opacity: 0;
+            }
+            8% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            }
+            17% {
+            opacity: 1
+            }
+            25% {
+            opacity: 0
+            }
+            100% {
+            opacity: 0
+            }
+        }
+
+        .navbarlogo {
+            max-height:75px;
+            max-width: 75px;
+            padding-inline: 10px;
+        }
         </style>
-
-        
-        <!-- Custom styles for this template -->
-    <head>
-    <body class="d-flex h-100 w-100 text-center text-white bg-dark">   
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="#">Jurgmeister Cocktails</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
-                    <a class="nav-link active" href="#">About</a>
-                    <a class="nav-link" href="#" >Cocktails</a>
-                    <a class="nav-link" href="#">Facebook</a>
-                    <a class="nav-link" href="#">Instagram</a>
+    </head> 
+    
+    <body class="d-flex h-100 w-100 text-center text-white bg-dark">
+        <div class="crossfade">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+        </div>  
+        <div class="cover-container d-flex w-100 h-100 p-0 mt-0 mx-auto flex-column">
+            <header class="mb-auto mt-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="{% url 'home'%}"><img class="navbarlogo" src="{% static 'Logo.png'%}"><b>Jurgmeister Cocktails</b></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ms-auto">
+                                <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+                                <a class="nav-link" href="{% url 'about'%}">About</a>
+                                <a class="nav-link" href="{% url 'allcocktails'%}">Cocktails</a>
+                                <a class="nav-link" target="_blank" href="https://www.facebook.com/profile.php?id=100069179911878">Facebook</a>
+                                <a class="nav-link" target="_blank" href="https://www.instagram.com/jurgmeister_cocktails/">Instagram</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </header>
+            
+            <main class="backgroundcentertext p-3 h-25">
+                <br></br>
+                <h1>Welcome to <b>Jurgmeister Cocktails</b>!</h1>
+                <p class="lead">We aim to bring you the best cocktail senstation ever experienced.</p>
+            </main>
+            
+            <footer class="mt-auto text-white">
+                    <p class="mb-1 text-center">&copy; <a target="_blank" href="http://www.test2impress.be">Test2Impress.be</a> {% now "Y" %}</p>
+            </footer>
+        </div>
 
-        <main class="px-3">
-            <h1>Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary text-dark fw-bold border-white bg-white">Learn more</a>
-            </p>
-        </main>
+        <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
-        <footer class="mt-auto text-white-50">
-            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-        </footer>
-        </div>    
-  </body>
-</html>
+    </body>
+    
+    </html>

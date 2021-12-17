@@ -1,117 +1,162 @@
-
 <!doctype html>
-<html lang="en"> 
-  <head>
-    {% load static %} 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Jurgmeister Cocktails - About</title>
+<html lang="en">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Jurgmeister Cocktails - About</title>
 
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+
+
+  <style>
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+          }
+    }
+
+    .navbarlogo {
+            max-height:75px;
+            max-width: 75px;
+            padding-inline: 10px;
+    }
     
+    .backgroundcentertext {
+        background-color: rgba(255, 255, 255, 0.651);
+        align-self: center;
+    }
 
-    <!-- Bootstrap core CSS -->
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    .backgroundcards {
+          background-color: rgb(238, 238, 238);
+    }
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+    .footera {
+            text-decoration: none;
+            color:rgb(255, 255, 255)
         }
-      }
-    </style>
 
-    
-  </head>
-  <body>
-    
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Jurgmeister Cocktails</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-              <a class="nav-link active" href="#">About</a>
-              <a class="nav-link" href="#" >Cocktails</a>
-              <a class="nav-link" href="#">Facebook</a>
-              <a class="nav-link" href="#">Instagram</a>
-            </div>
+    .footera:link, a:visited {
+            color: rgb(255, 255, 255);
+        }
+        
+    .footera:hover {
+            color: rgb(255, 255, 255);
+        }
+
+    a {
+            text-decoration: none;
+            color:rgb(0, 0, 0)
+        }
+
+    a:link, a:visited {
+            color: rgb(0, 0, 0);
+        }
+        
+    a:hover {
+            color: rgb(0, 0, 0);
+        }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        
+        <a class="navbar-brand" href="{% url 'home'%}"><img class="navbarlogo" src="{% static 'Logo.png'%}"><b>Jurgmeister Cocktails</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
+            <a class="nav-link active" href="{% url 'about'%}">About</a>
+            <a class="nav-link" href="{% url 'allcocktails'%}">Cocktails</a>
+            <a class="nav-link" target= "_blank" href="https://www.facebook.com/profile.php?id=100069179911878">Facebook</a>
+            <a class="nav-link" target="_blank" href="https://www.instagram.com/jurgmeister_cocktails/">Instagram</a>
           </div>
         </div>
-      </nav>
-</header>
-
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">What do we offer?</h1>
-        <p class="lead text-muted">At <b>Jurgmeister Cocktails</b> we offer a lot of different services. Have a look below to get more information! <br>Need more info? Mail us your question via the button below.</br> </p>
-        <p>
-          <a href="mailto:pieter@test2impress.be" class="btn btn-primary my-2">E-mail us!</a> <a href="{% static 'PriceList.pdf' %}'" class="btn btn-primary my-2">Prices</a>
-        </p>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <div class="album py-5 bg-dark">
-    <div class="container">
+  <main class="bg-dark">
+    
+    <section class="py-3 text-white text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">What do we offer?</h1>
+          <p class="lead">At <b>Jurgmeister Cocktails</b> we offer a lot of different services. Have a look
+            below to get more information! <br>Need more info? Mail us your question via the button below.</br> </p>
+          <p>
+            <a href="mailto:pieter@test2impress.be" class="btn btn-primary my-2">E-mail us!</a> <a
+              href="{% static 'PriceList.pdf' %}" class="btn btn-primary my-2">Prices</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 backgroundcentertext">
+      <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for service in services.all %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="img-fluid" width="100%" height="225" src="{{ service.image.url }}"><title>Placeholder</title></img>
-            <div class="card-body">
-              <p class="card-text">{{ service.title }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
+          {% for service in services.all %}
+          <div class="col">
+            <a class="card backgroundcards shadow" href="#">
+              <img class="img-fluid" width="100%" height="225" src="{{ service.image.url }}"><title>Placeholder</title></img>
+              <div class="card-body">
+                <p class="card-text">{{ service.title }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-        </div>
-            {% endfor %}
-</main>
+          {% endfor %}
+  </main>
 
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="mb-1 text-center">&copy; <a target="_blank" href="http://www.test2impress.be">Test2Impress.be</a> {% now "Y" %}</p>
-  </div>
-</footer>
-
-
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-      
-  </body>
+  <footer class="text-muted py-1 bg-black">
+    <div class="container">
+      <p class="mb-1 text-center">&copy; <footera target="_blank" href="http://www.test2impress.be">Test2Impress.be</footera> {% now "Y" %}</p>
+    </div>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
 </html>
