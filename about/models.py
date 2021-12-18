@@ -1,6 +1,6 @@
 from django.db import models
 
-class About(models.Model):
+class Abouts(models.Model):
     image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=200)
 
