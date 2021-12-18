@@ -3,8 +3,8 @@ from .models import Abouts
 
 def allabouts(request):
     abouts = Abouts.objects
-    return render(request,'abouts/allabouts.html',{'abouts': abouts})
+    return render(request,'about/allabouts.html',{'abouts': abouts})
 
-def detail(request, about_id):
+def aboutdetail(request, about_id):
     detailabout = get_object_or_404(Abouts, pk=about_id)
-    return render(request,'abouts/detail.html', {'about': detailabout})
+    return render(request,'about/detail.html', {'about': detailabout})

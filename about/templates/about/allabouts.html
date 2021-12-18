@@ -103,7 +103,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
-            <a class="nav-link active" href="{% url 'about'%}">About</a>
+            <a class="nav-link active" href="{% url 'allabouts'%}">About</a>
             <a class="nav-link" href="{% url 'allcocktails'%}">Cocktails</a>
             <a class="nav-link" target= "_blank" href="https://www.facebook.com/profile.php?id=100069179911878">Facebook</a>
             <a class="nav-link" target="_blank" href="https://www.instagram.com/jurgmeister_cocktails/">Instagram</a>
@@ -132,12 +132,13 @@
     <div class="album py-5 backgroundcentertext">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {% for about in services.all %}
+          {% for about in abouts.all %}
           <div class="col">
-            <a class="card backgroundcards shadow" href="{% url 'detail' about.id %}">
-              <img class="img-fluid" width="100%" height="225" src="{{ service.image.url }}"><title>Placeholder</title></img>
+            <a class="card backgroundcards shadow" href="{% url 'aboutdetail' about.id %}">
+              <img class="img-fluid" width="100%" height="225" src="{{ about.image.url }}"><title>Placeholder</title></img>
               <div class="card-body">
-                <p class="card-text">{{ service.title }}</p>
+                <h2 class="card-title"> {{about.title}}</h2>
+                <p class="card-text">{{ about.body }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
