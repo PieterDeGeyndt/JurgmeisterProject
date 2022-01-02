@@ -24,4 +24,5 @@ urlpatterns = [
     path('', homepage.views.home, name='home'),
     path('about/',include('about.urls')),
     path('cocktails/',include('cocktails.urls')),
+    path('accounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

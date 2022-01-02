@@ -95,7 +95,7 @@
 
         .backgroundcentertext {
         background-color: rgba(0,0,0,0.5);
-        align-self: center;
+        size: 100vh;
         }
 
         .centertext {
@@ -139,18 +139,18 @@
             <figure></figure>
             <figure></figure>
         </div>  
-        <div class="cover-container d-flex w-100 h-100 p-0 mt-0 mx-auto flex-column">
+        <div class="cover-container d-flex w-100 h-100 p-0 mx-auto flex-column">
             <header class="mb-auto mt-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="{% url 'home'%}"><img class="navbarlogo" src="{% static 'Logo.png'%}"><b>Jurgmeister Cocktails</b></a>
+                        <a class="navbar-brand" href="{% url 'home'%}"><img class="navbarlogo" src="{% static 'Logo.jpg'%}"><b>Jurgmeister Cocktails</b></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav ms-auto">
-                                <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
-                                <a class="nav-link" href="{% url 'allabouts'%}">About</a>
+                                <a class="nav-link active" aria-current="page" href="{% url 'home'%}"><b>Home</b></a>
+                                <a class="nav-link" href="{% url 'allabouts'%}">Services</a>
                                 <a class="nav-link" href="{% url 'allcocktails'%}">Cocktails</a>
                                 <a class="nav-link" target="_blank" href="https://www.facebook.com/profile.php?id=100069179911878">Facebook</a>
                                 <a class="nav-link" target="_blank" href="https://www.instagram.com/jurgmeister_cocktails/">Instagram</a>
@@ -160,11 +160,11 @@
                 </nav>
             </header>
             
-            <main class="backgroundcentertext p-3 h-25">
+            <div class="backgroundcentertext py-5">
                 <br></br>
                 <h1>Welcome to <b>Jurgmeister Cocktails</b>!</h1>
-                <p class="lead">We aim to bring you the best cocktail senstation ever experienced.</p>
-            </main>
+                <p class="lead">We aim to bring you the best cocktail senstation ever experienced!</p>
+            </div>
             
             <footer class="mt-auto text-white">
                     <p class="mb-1 text-center">&copy; <a target="_blank" href="http://www.test2impress.be">Test2Impress.be</a> {% now "Y" %}</p>

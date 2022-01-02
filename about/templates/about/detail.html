@@ -55,7 +55,7 @@
         .crossfade > figure {
             animation: imageAnimation 3s forwards;
             backface-visibility: hidden;
-            background-size:contain;
+            background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
             color: transparent;
@@ -75,11 +75,12 @@
 
         .backgroundcentertext {
         background-color: rgba(0,0,0,0.5);
+        text-align: center;
         align-self: center;
         }
 
         .centertext {
-            text-align: center;
+            text-align: center center;
         }
 
         @keyframes 
@@ -105,7 +106,7 @@
         .navbarlogo {
             max-height:75px;
             max-width: 75px;
-            padding-inline: 10px;
+            padding-inline: 5px;
         }
         </style>
 
@@ -124,7 +125,7 @@
             <header class="mb-auto mt-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
                     <div class="container-fluid">
-                        <img class="navbarlogo" src="{% static 'Logo.png'%}">
+                        <img class="navbarlogo" src="{% static 'Logo.jpg'%}">
                         <a class="navbar-brand" href="{% url 'home'%}">Jurgmeister Cocktails</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -133,8 +134,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav ms-auto">
-                                <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
-                                <a class="nav-link" href="{% url 'allabouts'%}">About</a>
+                                <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
+                                <a class="nav-link active" href="{% url 'allabouts'%}"><b>About</b></a>
                                 <a class="nav-link" href="{% url 'allcocktails'%}">Cocktails</a>
                                 <a class="nav-link" target="_blank" href="https://www.facebook.com/profile.php?id=100069179911878">Facebook</a>
                                 <a class="nav-link" target="_blank" href="https://www.instagram.com/jurgmeister_cocktails/">Instagram</a>
@@ -144,11 +145,11 @@
                 </nav>
             </header>
             
-            <main class="backgroundcentertext h-25 p-3">
+            <div class="backgroundcentertext p-3">
                 <h1 class="text-center p-3">{{about.title}}</h1>
                 <p class="lead text-left p-1">{{about.body}}</p>
                 <p class="lead text-left p-1">{{about.quotes}}</p>
-            </main>
+            </div>
             
             <footer class="mt-auto text-white-50">
                     <p class="mb-1 text-center">&copy; <a target="_blank" href="http://www.test2impress.be">Test2Impress.be</a> {% now "Y" %}</p>
