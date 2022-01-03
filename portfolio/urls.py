@@ -25,4 +25,5 @@ urlpatterns = [
     path('about/',include('about.urls')),
     path('cocktails/',include('cocktails.urls')),
     path('accounts/', include('allauth.urls')),
+    path('instagram/',homepage.views.instagram, name='instagram'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
