@@ -6,4 +6,4 @@ def home(request):
     return render(request,'homepage/home.html',{'homepage':homepage})
 
 def instagram(request):
-    return render(request,'homepage/instagram.html')
+    return render(request,'homepage/Instagram.html')
