@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from .models import Cocktails, Order, OrderItem
 from django.utils import timezone
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 
 def allcocktails(request):
     cocktails=Cocktails.objects
@@ -12,6 +12,7 @@ def detail(request, cocktail_id):
     detailcocktail = get_object_or_404(Cocktails, pk=cocktail_id)
     return render(request,'cocktails/detail.html', {'cocktail': detailcocktail})
 
+@login_required(login_url="/accounts/login")
 def add_to_cart(request, cocktail_id):
     item = get_object_or_404(Cocktails, pk=cocktail_id)
     order_item, created = OrderItem.objects.get_or_create(
@@ -36,6 +37,7 @@ def add_to_cart(request, cocktail_id):
         messages.info(request, "This item was added to your cart.")
     return redirect("detail",cocktail_id= cocktail_id)
 
+@login_required(login_url="/accounts/login")
 def remove_from_cart(request,cocktail_id):
     item=get_object_or_404(Cocktails,pk=cocktail_id)
     order_qs= Order.objects.filter(
@@ -71,3 +73,9 @@ def remove_from_cart(request,cocktail_id):
         #add a message saying the user does not have an order
         messages.info(request, "You do not have an active order")
         return redirect("detail", cocktail_id=cocktail_id)
+
+def your_cart(request):
+    return render(request,'cocktails/checkout.html')
+
+def your_account(request):
+    return redirect('/cocktails')

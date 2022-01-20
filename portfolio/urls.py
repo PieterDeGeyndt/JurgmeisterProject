@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import homepage.views
+import cocktails.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('cocktails/',include('cocktails.urls')),
     path('accounts/', include('allauth.urls')),
     path('instagram/',homepage.views.instagram, name='instagram'),
+    path('accounts/profile/', cocktails.views.your_account, name='account'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
